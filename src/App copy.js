@@ -45,7 +45,7 @@ export default function App(){
     <Router >
       <Switch>
         <Route path="/vocab">
-          <Vocab hsks={[hsk1, hsk2, hsk3, hsk4, hsk5, hsk6]}     />
+          <Vocab/>
         </Route>
         <Route path="/">
           <Link to="/vocab">vocal list</Link>
