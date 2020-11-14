@@ -20,7 +20,7 @@ const columns = [
   { field: 'def', headerName: 'def', type: 'number', width: 700 },
 ];
 
-export default ({hsks}) => {
+export default ({hsks, setCurrent}) => {
   console.log(hsks)
   const [level, setLevel] = useState(0)
   const [currentHSK, setCurrentHSK] = useState(hsks[level])
@@ -28,7 +28,8 @@ export default ({hsks}) => {
 
   useEffect(()=>{
     setCurrentHSK(hsks[level])
-  },[level, hsks])
+    setCurrent(hsks[level])
+  },[level, hsks, setCurrent])
 
   const handleChange = (e)=>{
     console.log("value",e.target.value)
